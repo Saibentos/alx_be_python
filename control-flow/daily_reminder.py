@@ -3,7 +3,7 @@
 # Get user input
 task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ").lower()
-time_bound = input("Is it time-bound? (yes/no/neither): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
 
 # Initialize message
 message = ""
