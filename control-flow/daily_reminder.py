@@ -25,7 +25,7 @@ if time_bound == "yes":
 else:
     message += ". Consider completing it when you have free time."
     
-if time_bound == "neither"
+if time_bound == "neither":
     message += " invalid input, choose the best option"
 else:
     message += ". Consider completing it when you have free time."
