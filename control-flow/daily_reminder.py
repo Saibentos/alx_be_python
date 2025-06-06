@@ -18,7 +18,7 @@ match priority:
         message = f"Note: '{task}' is a low priority task"
     case "neither":
         message = f"Invalid priority: {priority} for task '{task}'"
-         case  _:
+    case  "_":
         message = f"Invalid priority: {priority} for task '{task}'"
 
 # Add time-sensitivity detail
