@@ -3,7 +3,7 @@
 # Get user input
 task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ").lower()
-time_bound = input("Is it time-bound? (yes/no): ").lower()
+time_bound = input("Is it time-bound? (yes/no/neither): ").lower()
 
 # Initialize message
 message = ""
@@ -24,7 +24,7 @@ match priority:
 # Add time-sensitivity detail
 if time_bound == "yes":
     message += " that requires immediate attention today!"
-else time_bound == "no":
+else:
     message += ". Consider completing it when you have free time."
     
 if time_bound == "neither":
