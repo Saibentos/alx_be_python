@@ -25,7 +25,7 @@ match priority:
 if time_bound == "yes":
     message += " that requires immediate attention today!"
 else:
-    message += "no". Consider completing it when you have free time."
+    message += no". Consider completing it when you have free time."
     
 if time_bound == "neither":
     message += " invalid input, choose the best option"
