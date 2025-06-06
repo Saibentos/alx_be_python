@@ -1,22 +1,29 @@
 # daily_reminder.py
 
+# Get user input
 task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ").lower()
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
+# Initialize message
+message = ""
+
+# Match based on priority
 match priority:
     case "high":
-        if time_bound == "yes":
-            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
-        else:
-            print(f"Reminder: '{task}' is a high priority task. Consider completing it when you have free time.")
+        message = f"Reminder: '{task}' is a high priority task"
     case "medium":
-        if time_bound == "yes":
-            print(f"Reminder: '{task}' is a medium priority task that requires immediate attention today!")
-        else:
-            print(f"Reminder: '{task}' is a medium priority task. Consider completing it when you have free time.")
+        message = f"Reminder: '{task}' is a medium priority task"
     case "low":
-        if time_bound == "yes":
-            print(f"Note: '{task}' is a low priority task that requires immediate attention today!")
-        else:
-            print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
+        message = f"Note: '{task}' is a low priority task"
+    case _:
+        message = f"Invalid priority: {priority} for task '{task}'"
+
+# Add time-sensitivity detail
+if time_bound == "yes":
+    message += " that requires immediate attention today!"
+else:
+    message += ". Consider completing it when you have free time."
+
+# Print the final message
+print(message)
